@@ -42,7 +42,7 @@
 	    </div>
 	    <div class="footer_bottom">
 	      <p class="copyright">Copyright &copy; 2017 <a href="index.php">NewsFeed</a></p>
-	      <a class="developer" href = "http://www.maharjanpratik.com.np">Developed By Pratik Maharjan</a>
+	      <a class="developer" href = "http://www.maharjanpratik.com.np">Developed By CE Batch 2014</a>
 	    </div>
 	</footer>
 </div> <!-- .container -->

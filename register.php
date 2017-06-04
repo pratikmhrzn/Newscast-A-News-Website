@@ -14,7 +14,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])):
 
   if( $stmt->execute()):
     $_SESSION["message"] = "Successfully created new user";
-    header("Location: login.php");
+    header("Location: signup.php");
 
   else:
     die('Sorry there must have been some problem');

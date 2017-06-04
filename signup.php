@@ -1,5 +1,11 @@
 <?php
 require_once "database.php";
+
+if(!isset($_SESSION['user_id'])) {
+  $_SESSION["message"] = "You must be logged in to register a new user.";
+  header("Location: login.php");
+}
+
 ?>
 <!DOCTYPE html>
   <html>
@@ -14,31 +20,37 @@ require_once "database.php";
          <p style="color:white;text-align: center;">
           <?php 
             echo $_SESSION["message"]; 
-            session_unset();
+            unset($_SESSION["message"]);
           ?>
         </p>
         <?php endif; ?>
       <ul class="tab-group">
-        <li class="tab active"><a href="#login">Log In</a></li>
+        <li class="tab active" ><a href="#signup">Sign Up</a></li>
+        <!-- <li class="tab"><a href="panel.php">Go Back</a></li> -->
       </ul>
       <div>
-        <div id="login">
-          <h1>Welcome Back!</h1>
-          <form action="trylogin.php" method="post">
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email" name="email" required autocomplete="off"/>
+        <div id="signup">   
+          <h1>Register into Newscast</h1>
+          <form action="register.php" method="post">
+          <div class="field-wrap">
+              <label>
+                Name<span class="req">*</span>
+              </label>
+              <input type="text" name="name" required/>
           </div>
           <div class="field-wrap">
             <label>
-              Password<span class="req">*</span>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" name="email" required/>
+          </div>
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
             </label>
             <input type="password" name="password" required autocomplete="off"/>
           </div>
-          <!-- <p class="forgot"><a href="#">Forgot Password?</a></p> -->
-          <button class="button button-block"/>Log In</button>
+          <button type="submit" class="button button-block"/>Get Started</button>
           </form>
         </div>
       </div><!-- tab-content -->

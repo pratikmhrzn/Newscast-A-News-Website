@@ -54,6 +54,7 @@ require "database.php";
               printf($results['name']);
               ?>
               </i>
+              <a href ="panel.php">Admin Panel</a>
               <a href = "logout.php">Logout</a>
               <?php endif; ?>
             </li>
