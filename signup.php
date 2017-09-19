@@ -26,7 +26,6 @@ if(!isset($_SESSION['user_id'])) {
         <?php endif; ?>
       <ul class="tab-group">
         <li class="tab active" ><a href="#signup">Sign Up</a></li>
-        <!-- <li class="tab"><a href="panel.php">Go Back</a></li> -->
       </ul>
       <div>
         <div id="signup">   
